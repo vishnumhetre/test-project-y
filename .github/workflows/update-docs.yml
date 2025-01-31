@@ -1,32 +1,32 @@
-name: Deploy Documentation
+name: Build and Deploy Documentation
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger this action when changes are pushed to the main branch.
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout Project Y Repository
+      uses: actions/checkout@v2
+      with:
+        repository: vishnumhetre/test-project-y
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
+    - name: Set up Python environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
 
-      - name: Install dependencies
-        run: |
-          pip install mkdocs mkdocs-material
+    - name: Install MkDocs and MkDocs Material
+      run: |
+        pip install mkdocs
+        pip install mkdocs-material
 
-      - name: Build MkDocs site
-        run: mkdocs build
+    - name: Build Documentation
+      run: mkdocs build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+    - name: Deploy to GitHub Pages (optional)
+      run: mkdocs gh-deploy --force
