@@ -1,22 +1,17 @@
-# Getting Started
+# Welcome to MkDocs
 
-Welcome to the official documentation for **WellSky**. Here, you'll find all the information you need to get started with our products and services.
+For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## About Us
+## Commands
 
-WellSky is dedicated to providing top-notch solutions to meet your needs. Our team of experts is committed to delivering innovative and reliable services.
+* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs -h` - Print help message and exit.
 
-## Getting Started
+## Project layout
 
-To get started, please refer to the following sections:
-
-- Introduction: Learn about our mission and values.
-- Installation: Step-by-step guide to install our products.
-- User Guide: Detailed instructions on how to use our services.
-- API Reference: Comprehensive API documentation.
-
-## Support
-
-If you have any questions or need assistance, please reach out to our support team at support@wellsky.com
-
-Thank you for choosing WellSky!
+    mkdocs.yml    # The configuration file.
+    docs/
+        index.md  # The documentation homepage.
+        ...       # Other markdown pages, images and other files.
