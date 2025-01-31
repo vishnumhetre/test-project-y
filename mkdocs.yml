@@ -5,4 +5,8 @@ theme:
   
 nav:
   - Getting Started: "index.md"
-  - User Guide: "user-guide.md"
+  - Technologies & Setup: "technologies-setup.md"
+  - Architecture: "architecture.md"
+  - Deployment: "deployment.md"
+  - Contributing: "contributing.md"
+  - Terraform Modules : "teraform-module.md"
